@@ -1,0 +1,49 @@
+ion-content {
+    --background: url('/assets/icon/table.jpeg') no-repeat 50%;
+}
+
+.item-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.item-padding-top-mini {
+    margin-top: 1%;
+}
+
+.item-padding-top {
+    padding-top: 5%;
+}
+
+.item-padding-left {
+    padding-left: 100px;
+}
+.item-padding-right {
+    padding-right: 100px;
+}
+
+.item-start {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: white;
+    padding-left: 3%;
+}
+
+.item-end {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: white;
+    padding-right: 3%;
+}
+
+.item-avatar {
+    --background: transparent;
+}
+
+img {
+    border-radius: 10%;
+}

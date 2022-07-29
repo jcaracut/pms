@@ -1,0 +1,46 @@
+<ion-content [fullscreen]="true" class="ion-no-padding scrollable-true">
+  <ion-grid class="grid" fixed>
+    <ion-row>
+      <ion-col>
+        <div class="ion-padding container">
+          <ion-text class="ion-text-center">
+            <h1>Dealer Login</h1>
+          </ion-text>
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="form-container">
+              <ion-item>
+                &nbsp;&nbsp;
+                <ion-input placeholder="Username" type="text" formControlName="username"
+                  (keydown.space)="$event.preventDefault();"></ion-input>
+                <span *ngIf="(f.username.dirty || f.username.touched) && f.username.errors?.required"
+                  class="error-message">Required Field.</span>
+              </ion-item><br>
+              <ion-item>
+                &nbsp;&nbsp;
+                <ion-input placeholder="Password" type="{{ isShowPassword ? 'text' : 'password' }}" formControlName="password"></ion-input>
+                <span *ngIf="(f.password.dirty || f.password.touched) && f.password.errors?.required"
+                  class="error-message">Required Field.</span>
+                <ion-icon (click)="isShowPassword = !isShowPassword" name="{{ isShowPassword ? 'eye-off' : 'eye'}}" slot="end"></ion-icon>
+              </ion-item>
+              <!-- <ion-checkbox>
+              </ion-checkbox>
+              <ion-label style="margin-bottom: 10%;"> Remember me</ion-label> -->
+              <div class="button-container">
+                <ion-button class="button" color="success" expand="block" type="submit">Login</ion-button>
+              </div>
+              <!-- <div class="ion-text-center forgot-password">
+                <ion-label color="primary" routerLink="/signup" routerDirection="forward">Forgot Password?</ion-label>
+              </div>
+              <div class="ion-text-center sign-up">
+                <ion-label style="color: gray;">Don't have an account?</ion-label>&nbsp;<p style="color: #6B59A6; text-decoration: underline; font-weight: 500;">Sign Up</p>
+              </div> -->
+            </div>
+          </form>
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

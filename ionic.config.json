@@ -1,0 +1,7 @@
+{
+  "name": "Poker Boss",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

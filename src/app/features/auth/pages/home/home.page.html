@@ -1,0 +1,50 @@
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar color='light'>
+    <ion-buttons slot="start">
+      <ion-menu-button>
+        <img height="80" width="80" src="assets/icons/menu.png" alt="menu">
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button>
+        <ion-icon style="font-size: 40px;" name="help-circle-outline"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-no-padding scrollable-true">
+  <ion-grid class="grid">
+    <ion-row>
+      <ion-col *ngFor="let item of options;let i = index;" size="6" class="ion-no-padding">
+        <div [routerLink]="['/' + item.name]" routerLinkActive="router-link-active">
+          <img width="300" [src]="item.icon" alt="item.url">
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- FOR BLUETOOTH PRINTING -->
+
+  <!-- <ion-textarea [(ngModel)]="stringVal" placeholder="Input text here">
+  </ion-textarea>
+
+  <br><br><br><br>
+
+  <ion-item (click)="connectPrinter(item.address)" *ngFor="let item of list">
+    <ion-label>Connect to {{ item.name }}</ion-label>
+  </ion-item>
+  
+  <ion-button (click)="scanPrinters()" expand="block" fill="clear" shape="round">
+    Scan
+  </ion-button>
+
+  <ion-button (click)="print()" expand="block" fill="clear" shape="round">
+    Print
+  </ion-button>
+  <ion-button (click)="disconnectPrinter()" expand="block" fill="clear" shape="round">
+    Disconnect
+  </ion-button> -->
+
+
+</ion-content>
