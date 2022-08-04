@@ -1,49 +1,64 @@
 ion-content {
-    --background: url('/assets/icon/table.jpeg') no-repeat 50%;
+  --background: url('/assets/icon/table.jpeg') no-repeat 50%;
+}
+
+@keyframes b {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 250px;
+  }
 }
 
 .item-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 .item-padding-top-mini {
-    margin-top: 1%;
+  margin-top: 1%;
 }
 
 .item-padding-top {
-    padding-top: 5%;
+  padding-top: 5%;
 }
 
 .item-padding-left {
-    padding-left: 100px;
+  padding-left: 100px;
 }
+
 .item-padding-right {
-    padding-right: 100px;
+  padding-right: 100px;
 }
 
 .item-start {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    color: white;
-    padding-left: 3%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: white;
+  padding-left: 3%;
 }
 
 .item-end {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    color: white;
-    padding-right: 3%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: white;
+  padding-right: 3%;
 }
 
 .item-avatar {
-    --background: transparent;
+  --background: transparent;
 }
 
 img {
-    border-radius: 10%;
+  border-radius: 10%;
 }

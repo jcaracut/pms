@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 import { LayoutModule } from './layout/layout.module';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LayoutModule } from './layout/layout.module';
     IonicModule.forRoot(),
     AppRoutingModule,
     LayoutModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
