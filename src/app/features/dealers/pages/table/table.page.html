@@ -1,5 +1,14 @@
-<ion-content>
-    <ion-grid fixed>
+<ion-content [ngStyle]="table_style">
+    <!-- Scanner -->
+    <div class="main" [hidden]="!scan_started">
+        <div class="ocrloader">
+            <small text-center style="color: rgb(31, 30, 30);">Align QR Code to scan.</small>
+            <em></em>
+            <div></div>
+            <span></span>
+        </div>
+    </div>
+    <ion-grid fixed [hidden]="scan_started">
         <ion-row class="item-padding-top-mini">
             <ion-col size="4" class="item-center item-padding-left">
                 <img [src]="player_icon" />
@@ -39,5 +48,80 @@
             </ion-col>
         </ion-row>
     </ion-grid>
+
     
+
+    <!-- <ion-grid fixed>
+        <ion-row class="item-padding-top-mini">
+            <ion-col size="4" class="item-center item-padding-left">
+                <img [src]="player_icon" />
+            </ion-col>
+            <ion-col size="4" class="item-center">
+                <img [src]="player_icon" />
+            </ion-col>
+            <ion-col size="4" class="item-center item-padding-right">
+                <img [src]="player_icon" />
+            </ion-col>
+        </ion-row>
+        <ion-row class="item-padding-top">
+            <ion-col size="6" class="item-start">
+                <img [src]="player_icon" />
+            </ion-col>
+            <ion-col size="6" class="item-end">
+                <img [src]="player_icon" />
+            </ion-col>
+        </ion-row>
+        <ion-row class="item-padding-top">
+            <ion-col size="6" class="item-start">
+                <img [src]="player_icon" />
+            </ion-col>
+            <ion-col size="6" class="item-end">
+                <img [src]="player_icon" />
+            </ion-col>
+        </ion-row>
+        <ion-row class="item-padding-top">
+            <ion-col size="4" class="item-center item-padding-left">
+                <img [src]="player_icon" />
+            </ion-col>
+            <ion-col size="4" class="item-center">
+                <img [src]="dealer_icon" />
+            </ion-col>
+            <ion-col size="4" class="item-center item-padding-right">
+                <img [src]="player_icon" />
+            </ion-col>
+        </ion-row>
+    </ion-grid> -->
+    <!-- <ion-grid fixed>
+        <ion-row class="item-padding-top-mini">
+            <ion-col size="4" class="item-center item-padding-left">
+                <img [src]="player_icon" />
+            </ion-col>
+            <ion-col size="4" class="item-center">
+            </ion-col>
+            <ion-col size="4" class="item-center item-padding-right">
+                <img [src]="player_icon" />
+            </ion-col>
+        </ion-row>
+        
+        <ion-row class="item-6-padding-top">
+            <ion-col size="6" class="item-start">
+                <img [src]="player_icon" />
+            </ion-col>
+            <ion-col size="6" class="item-end">
+                <img [src]="player_icon" />
+            </ion-col>
+        </ion-row>
+        <ion-row class="item-6-padding-top">
+            <ion-col size="4" class="item-center item-padding-left">
+                <img [src]="player_icon" />
+            </ion-col>
+            <ion-col size="4" class="item-center">
+                <img [src]="dealer_icon" />
+            </ion-col>
+            <ion-col size="4" class="item-center item-padding-right">
+                <img [src]="player_icon" />
+            </ion-col>
+        </ion-row>
+    </ion-grid> -->
+    <!-- <app-scanner></app-scanner> -->
 </ion-content>

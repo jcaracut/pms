@@ -12,7 +12,9 @@ export class ScannerComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.scan_started = true;
+  }
 
   async checkPermission() {
     return new Promise(async (resolve, reject) => {

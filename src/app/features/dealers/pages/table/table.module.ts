@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { TablePageRoutingModule } from './table-routing.module';
 
 import { TablePage } from './table.page';
+import { ScannerComponent } from './components/scanner/scanner.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { TablePage } from './table.page';
     IonicModule,
     TablePageRoutingModule
   ],
-  declarations: [TablePage]
+  declarations: [TablePage, ScannerComponent]
 })
 export class TablePageModule {}

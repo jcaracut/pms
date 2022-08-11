@@ -13,6 +13,13 @@ ion-toolbar {
   }
 }
 
+.logo {
+  width: 350px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+
 .grid {
   padding-top: 5%;
   display: flex;

@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Dealer } from '../models/Dealer';
 import { Player } from '../models/Player';
+import { TableProfile } from '../models/TableProfiles';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,11 @@ export class DealerService {
   
   
   GetPlayerInfo(): Observable<Player>{
-    return this.http.get<Player>(`${this.url}/api/player`).pipe(map((result:any)=>result.data.customers));
+    return this.http.get<Player>(`${this.url}/api/player`).pipe(map((result:any)=>result.data.playerInfo));
+  }
+
+  GetTableProfile(): Observable<TableProfile[]>{
+    return this.http.get<TableProfile[]>(`${this.url}/api/tableProfile`).pipe(map((result:any)=>result.data.tableProfiles));
   }
 
 }

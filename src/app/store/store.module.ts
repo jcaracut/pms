@@ -4,14 +4,14 @@ import { StoreModule } from '@ngrx/store';
 import { rootReducer } from './reducers/root.reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
-import { PlayerEffects } from './effects/player.effects';
+import { DealerEffects } from './effects/dealer.effects';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     StoreModule.forRoot({ pos: rootReducer }),
-    EffectsModule.forRoot([PlayerEffects]),
+    EffectsModule.forRoot([DealerEffects]),
     StoreDevtoolsModule.instrument(),
   ]
 })

@@ -6,18 +6,27 @@ import { DealerService } from "src/app/features/dealers/services/dealer.service"
 import * as actions from "../actions"
 
 @Injectable()
-export class PlayerEffects {
+export class DealerEffects {
 
     constructor(
         private dealerSvc: DealerService,
         @Inject(Actions) private actions$
     ) { }
 
-    getProducts = createEffect(() => this.actions$.pipe(
+    getPlayerInfo = createEffect(() => this.actions$.pipe(
         ofType(actions.getPlayerInfo),
         switchMap(() => {
             return this.dealerSvc.GetPlayerInfo().pipe(
                 map(playerInfo => actions.getPlayerInfoSuccess({ playerInfo })),
+            );
+        }),
+    ));
+
+    getTableProfile = createEffect(() => this.actions$.pipe(
+        ofType(actions.getTableProfile),
+        switchMap(() => {
+            return this.dealerSvc.GetTableProfile().pipe(
+                map(tableProfiles => actions.getTableProfileSuccess({ tableProfiles })),
             );
         }),
     ));
